@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Predict } from '../models/response.model';
 import { environment } from 'src/environments/environment';
 
-const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMTc2MDQ5LCJpYXQiOjE3MDE2NDAwNDksImp0aSI6IjhjMmZjYTQ5ZmY3NDQ3OTI4OGMwZTI0NzdjMzI1NWM5IiwidXNlcl9pZCI6MX0.WfUB_piRAhZxOHg6Py__B8eZkSWtT--YCET0P-K5_OA'
+const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMTkzMjY0LCJpYXQiOjE3MDE2NTcyNjQsImp0aSI6ImIyZGVjNjBmYzljMzQzZjRiMDM1Yzk4MWFjODY0YTA0IiwidXNlcl9pZCI6MX0.aWlWbZma9_QchEj1ZxM4rspNZ6plcOQaxEvfiS_CXtc'
 
 @Injectable({
   providedIn: 'root'

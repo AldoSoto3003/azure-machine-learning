@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "ca69d8fa-c7e8-4540-981a-6dd3bb6b6ab4",
+		"name": "Accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23949579"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "list_users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzc2Mzk0LCJpYXQiOjE2OTkyNDAzOTQsImp0aSI6IjIxODczZWQyNjJhNjQ0ZGI5YTk0MjJmMzdlMjA4MWMxIiwidXNlcl9pZCI6MX0.4gRakT3t8DibdBcE1QBVRa-LeaP1SWu4vZRkGPjEsdo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMwNzA2Njc1LCJpYXQiOjE2OTkxNzA2NzUsImp0aSI6IjFhMTA4NzlmZTI5ZDRhM2M5MTkwMzkxYzkzNDViNTllIiwidXNlcl9pZCI6MX0.JPjSG6wv_CoeW5zL7NzDS6WpCsDF4hrmZ0CcDNijtCY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/list_users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"list_users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth_me",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMTY2NjE5LCJpYXQiOjE3MDE2MzA2MTksImp0aSI6IjVmMDk4OTg2MzY4MjQzYTZiZmM3MmRiMDQxNDM5MzAyIiwidXNlcl9pZCI6MX0.J1umGkYhfXZuKKrTftTuMrdhHuhxlVdCXNnS-4m8OZ0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/auth_me/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"auth_me",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"pitoperez@gmail.com\",\r\n    \"password\":\"pitoperez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"PitoPerez\",\r\n    \"email\": \"pitoperez@gmail.com\",\r\n    \"first_name\": \"Pito\",\r\n    \"last_name\": \"Perez\",\r\n    \"phone_number\": \"6683209979\",\r\n    \"password\": \"pitoperez\",\r\n    \"password2\": \"pitoperez\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/register_user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"register_user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczMzE2NjYxOSwiaWF0IjoxNzAxNjMwNjE5LCJqdGkiOiI5NjI5YWU0MWEwMGQ0ZGEzYTBhOGZkYjhlY2Q1MDNiNyIsInVzZXJfaWQiOjF9.vqZRnP_xbgFyizmmnnVckaa1TergXtQQP16PAzc0HQ8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/logout/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "token_refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczMDkxMDgxMiwiaWF0IjoxNjk5Mzc0ODEyLCJqdGkiOiI2NDk0YjYwY2Y5YTY0NDA4OWM1MGQwMTkxYTVlMmM2NCIsInVzZXJfaWQiOjF9.HHUDCxr6kpPCTdKVDrhn8Yk2njVMHmqsSsQnBgb8knA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/account/login/refresh/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"account",
+								"login",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DataMining",
+			"item": [
+				{
+					"name": "Predict",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMTc2MDQ5LCJpYXQiOjE3MDE2NDAwNDksImp0aSI6IjhjMmZjYTQ5ZmY3NDQ3OTI4OGMwZTI0NzdjMzI1NWM5IiwidXNlcl9pZCI6MX0.WfUB_piRAhZxOHg6Py__B8eZkSWtT--YCET0P-K5_OA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Col1\":\"A11\",\r\n    \"Col2\":50,\r\n    \"Col3\":\"50\",\r\n    \"Col4\":\"A43\",\r\n    \"Col5\":1169,\r\n    \"Col6\":\"A65\",\r\n    \"Col7\":\"A75\",\r\n    \"Col8\":4,\r\n    \"Col9\":\"A93\",\r\n    \"Col10\":\"A101\",\r\n    \"Col11\":4,\r\n    \"Col12\":\"A121\",\r\n    \"Col13\":67,\r\n    \"Col14\":\"A143\",\r\n    \"Col15\":\"A152\",\r\n    \"Col16\":2,\r\n    \"Col17\":\"A173\",\r\n    \"Col18\":1,\r\n    \"Col19\":\"A192\",\r\n    \"Col20\":\"A201\",\r\n    \"Col21\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/machinelearning/predict/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"machinelearning",
+								"predict",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
